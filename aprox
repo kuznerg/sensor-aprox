@@ -27,8 +27,9 @@ void loop()
   Serial.print(d);      //Enviamos serialmente el valor de la distancia
   Serial.print("cm");
   Serial.println();
-  if (d == 12); 
-  digitalWrite(Ledpin, HIGH);
-  delay(1000);          //Hacemos una pausa de 100ms
+ if (d <= 12) {
+  digitalWrite(Ledpin, HIGH);}
+  else digitalWrite(Ledpin ,LOW)
+  delay(1000);                   //Hacemos una pausa de 100ms
   
 }
